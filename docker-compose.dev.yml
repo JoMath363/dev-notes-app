@@ -3,9 +3,10 @@ services:
     build: ./server
     container_name: devnotes-server
     environment:
+      ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__WebApiDatabase: "Host=postgres;Database=${POSTGRES_DB};Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
     ports:
-      - "8000:8000"
+      - "8080:8080"
     depends_on:
       postgres:
         condition: service_healthy

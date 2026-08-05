@@ -8,15 +8,10 @@ namespace DevNotes.Api.Controllers
     [Route("[controller]")]
     public class NoteController : ControllerBase
     {
-        private static readonly string[] Summaries =
-        [
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        ];
-
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            return Ok();
+            return Ok("hello");
         }
     }
 }
